@@ -1,5 +1,5 @@
 <div align="center">
-  <!-- Banner animado -->
+  <!-- Banner com efeito de máquina de escrever -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=007ACC&center=true&vCenter=true&width=600&lines=Pablo+Jacob+Pozzer+Werner;Analista+de+Intelig%C3%AAncia+de+Mercado+S%C3%AAnior;Desenvolvedor+de+Software;Focado+em+Dados%2C+BI+e+Solu%C3%A7%C3%B5es+Web" alt="Typing SVG" />
 
   <p><strong>Combinando visão estratégica de negócios e inteligência de dados com sólida capacidade técnica em desenvolvimento.</strong></p>
@@ -74,21 +74,4 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/profile-night-view.svg" alt="Gráfico de Contribuições 3D Escuro" />
-</div>
-
-<hr />
-
-### 📊 Estatísticas em Tempo Real
-
-<div align="center">
-  <!-- Estatísticas Dinâmicas principais -->
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PabliitoxD&layout=compact&theme=tokyonight" alt="Linguagens mais utilizadas" />
-</div>
-
-<br />
-
-<div align="center">
-  <!-- Streak de commits -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PabliitoxD&theme=tokyonight" alt="Streak de Contribuições" />
 </div>
