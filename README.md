@@ -1,5 +1,5 @@
 <div align="center">
-  <!-- Banner animado e personalizado -->
+  <!-- Banner com efeito de máquina de escrever -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=007ACC&center=true&vCenter=true&width=600&lines=Pablo+Jacob+Pozzer+Werner;Analista+de+Intelig%C3%AAncia+de+Mercado+S%C3%AAnior;Desenvolvedor+de+Software;Focado+em+Dados%2C+BI+e+Solu%C3%A7%C3%B5es+Web" alt="Typing SVG" />
 
   <p><strong>Combinando visão estratégica de negócios e inteligência de dados com sólida capacidade técnica em desenvolvimento.</strong></p>
@@ -69,20 +69,18 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
 
 <hr />
 
-### 🐍 GitHub Contribution Snake
-*Gerado dinamicamente todos os dias através do GitHub Actions.*
+### 🏙️ Atividade em Relevo 3D
+*Renderizado automaticamente todos os dias.*
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-contribution-grid-snake.svg">
-</picture>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/profile-green-animate.svg" alt="Gráfico de Contribuições 3D" />
+</div>
 
 <hr />
 
 ### 📊 Estatísticas em Tempo Real
-*Atenção: Atualizado uma vez ao dia para evitar instabilidades de APIs de terceiros.*
+*Salvo localmente para evitar instabilidades de APIs de terceiros.*
 
 <div align="center">
-  <img height="180em" src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats.svg" alt="Stats" />
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats.svg" alt="Estatísticas do GitHub" />
 </div>
