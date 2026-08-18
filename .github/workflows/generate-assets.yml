@@ -2,18 +2,26 @@ name: Generate Profile Assets
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Roda todo dia à meia-noite
-  workflow_dispatch: # Permite rodar manualmente a qualquer momento
+    - cron: "0 0 * * *"
+  workflow_dispatch:
   push:
     branches:
-      - main # Roda sempre que você fizer um push na main
+      - main
 
 jobs:
   generate:
+    # 🔑 Adiciona a permissão de escrita para salvar as imagens no repositório
+    permissions:
+      contents: write
+    
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      # 1. Gera o jogo da cobrinha (SVG)
+      # 1. Checkout do código usando a versão estável mais recente (v4)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Gera o jogo da cobrinha (SVG)
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -22,15 +30,15 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 2. Cria a pasta dist se não existir e baixa o card de estatísticas atualizado
+      # 3. Cria a pasta dist se não existir e baixa o card de estatísticas atualizado
       - name: Generate stats card
         run: |
           mkdir -p dist
           curl -o dist/github-stats.svg "https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"
 
-      # 3. Faz o deploy dos arquivos gerados para a branch isolada 'output'
+      # 4. Faz o deploy dos arquivos gerados para a branch isolada 'output' usando a versão estável mais recente (v4)
       - name: Deploy to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
