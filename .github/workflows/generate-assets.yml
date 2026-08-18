@@ -26,9 +26,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: PabliitoxD
 
-      # 3. Gera os cards de estatísticas no tema Tokyo Night localmente
+      # 3. Gera os cards de estatísticas no tema Tokyo Night localmente (Nome correto: vn7n24fzkq)
       - name: Generate profile summary cards
-        uses: vn7n24f1tr1/github-profile-summary-cards@v0.6.0
+        uses: vn7n24fzkq/github-profile-summary-cards@v0.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
