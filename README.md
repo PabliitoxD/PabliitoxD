@@ -69,7 +69,7 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
 
 <hr />
 
-### 🏙️ Atividade em Relevo 3D (Dark Theme)
+### 🏙️ Atividade em Relevo 3D
 *Renderizado automaticamente todos os dias no tema escuro.*
 
 <div align="center">
@@ -78,12 +78,17 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
 
 <hr />
 
-### 📊 Estatísticas em Tempo Real (Tema Escuro)
-*Cards gerados localmente via GitHub Actions (livre de instabilidades externas).*
+### 📊 Estatísticas em Tempo Real
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/0-profile-details.svg" alt="Resumo de Atividades do GitHub" />
-  <br />
-  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/1-repos-per-language.svg" alt="Repositórios por Linguagem" />
-  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/2-most-commit-language.svg" alt="Linguagens Mais Modificadas" />
+  <!-- Estatísticas Dinâmicas principais -->
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PabliitoxD&layout=compact&theme=tokyonight" alt="Linguagens mais utilizadas" />
+</div>
+
+<br />
+
+<div align="center">
+  <!-- Streak de commits -->
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PabliitoxD&theme=tokyonight" alt="Streak de Contribuições" />
 </div>
