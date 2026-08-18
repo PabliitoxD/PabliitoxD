@@ -10,8 +10,9 @@ on:
 
 jobs:
   generate:
-    permissions:
-      contents: write
+    # 🔑 Garante permissões totais para ler a API e escrever no repositório
+    permissions: write-all
+    
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -19,14 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Gera o gráfico de contribuição 3D (incluindo o tema dark/night)
+      # 2. Gera o gráfico de contribuição 3D (Tema Escuro/Night)
       - name: Generate 3D contribution chart
         uses: yoshi389111/github-profile-3d-contrib@0.7.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: PabliitoxD
 
-      # 3. Gera os cards de estatísticas no tema Tokyo Night localmente (Nome correto: vn7n24fzkq)
+      # 3. Gera os cards de estatísticas (Tokyo Night)
       - name: Generate profile summary cards
         uses: vn7n24fzkq/github-profile-summary-cards@v0.6.0
         env:
@@ -35,17 +36,15 @@ jobs:
           username: PabliitoxD
           theme: tokyonight
 
-      # 4. Organiza os arquivos gerados na pasta 'dist' para o deploy
+      # 4. Limpa e organiza tudo na pasta 'dist' para o deploy sem conflito de commits
       - name: Prepare assets for deploy
         run: |
           mkdir -p dist
-          # Copia os gráficos 3D (incluindo a versão escurecida 'profile-night-view.svg')
           cp -r profile-3d-contrib/* dist/ || true
-          # Copia as estatísticas geradas no tema tokyonight para dist/github-stats
           mkdir -p dist/github-stats
           cp -r profile-summary-card-output/tokyonight/* dist/github-stats/ || true
 
-      # 5. Faz o deploy dos arquivos da pasta 'dist' para a branch 'output'
+      # 5. Salva na branch 'output'
       - name: Deploy to Output Branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
