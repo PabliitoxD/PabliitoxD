@@ -15,28 +15,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      # 1. Checkout do repositório
+      # 1. Checkout do código
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Gera o gráfico de contribuição 3D (estilo cidade isométrica)
+      # 2. Gera o gráfico de contribuição 3D (estilo cidade isométrica) na pasta 'dist'
       - name: Generate 3D contribution chart
         uses: yoshi389111/github-profile-3d-contrib@0.7.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: PabliitoxD
 
-      # 3. Cria a pasta dist se não existir e baixa o card de estatísticas
-      - name: Generate stats card
+      # 3. Move o gráfico gerado para a pasta 'dist' e baixa as estatísticas lá também
+      - name: Prepare assets and generate stats card
         run: |
-          mkdir -p profile-3d-contrib
-          curl -o profile-3d-contrib/github-stats.svg "https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"
+          mkdir -p dist
+          # O gerador 3D salva os arquivos na pasta "profile-3d-contrib", vamos copiá-los para "dist"
+          cp -r profile-3d-contrib/* dist/ || true
+          # Baixa o card de estatísticas oficial do GitHub na mesma pasta
+          curl -o dist/github-stats.svg "https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"
 
-      # 4. Faz o deploy dos SVGs gerados para a branch 'output'
+      # 4. Faz o deploy dos arquivos unificados da pasta 'dist' para a branch 'output'
       - name: Deploy to Output Branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: profile-3d-contrib
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
