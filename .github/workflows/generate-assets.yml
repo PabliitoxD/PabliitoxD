@@ -19,23 +19,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Gera o gráfico de contribuição 3D (estilo cidade isométrica) na pasta 'dist'
+      # 2. Gera o gráfico de contribuição 3D (incluindo o tema dark/night)
       - name: Generate 3D contribution chart
         uses: yoshi389111/github-profile-3d-contrib@0.7.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: PabliitoxD
 
-      # 3. Move o gráfico gerado para a pasta 'dist' e baixa as estatísticas lá também
-      - name: Prepare assets and generate stats card
+      # 3. Gera os cards de estatísticas no tema Tokyo Night localmente
+      - name: Generate profile summary cards
+        uses: vn7n24f1tr1/github-profile-summary-cards@v0.6.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          username: PabliitoxD
+          theme: tokyonight
+
+      # 4. Organiza os arquivos gerados na pasta 'dist' para o deploy
+      - name: Prepare assets for deploy
         run: |
           mkdir -p dist
-          # O gerador 3D salva os arquivos na pasta "profile-3d-contrib", vamos copiá-los para "dist"
+          # Copia os gráficos 3D (incluindo a versão escurecida 'profile-night-view.svg')
           cp -r profile-3d-contrib/* dist/ || true
-          # Baixa o card de estatísticas oficial do GitHub na mesma pasta
-          curl -o dist/github-stats.svg "https://github-readme-stats.vercel.app/api?username=PabliitoxD&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"
+          # Copia as estatísticas geradas no tema tokyonight para dist/github-stats
+          mkdir -p dist/github-stats
+          cp -r profile-summary-card-output/tokyonight/* dist/github-stats/ || true
 
-      # 4. Faz o deploy dos arquivos unificados da pasta 'dist' para a branch 'output'
+      # 5. Faz o deploy dos arquivos da pasta 'dist' para a branch 'output'
       - name: Deploy to Output Branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
