@@ -1,5 +1,5 @@
 <div align="center">
-  <!-- Banner com efeito de máquina de escrever -->
+  <!-- Banner animado -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=007ACC&center=true&vCenter=true&width=600&lines=Pablo+Jacob+Pozzer+Werner;Analista+de+Intelig%C3%AAncia+de+Mercado+S%C3%AAnior;Desenvolvedor+de+Software;Focado+em+Dados%2C+BI+e+Solu%C3%A7%C3%B5es+Web" alt="Typing SVG" />
 
   <p><strong>Combinando visão estratégica de negócios e inteligência de dados com sólida capacidade técnica em desenvolvimento.</strong></p>
@@ -31,7 +31,7 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
   <br />
   <img src="https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel Avançado" />
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" />
   <img src="https://img.shields.io/badge/Dashboards_BI-F2C94C?style=for-the-badge&logo=databricks&logoColor=black" alt="BI Dashboards" />
 </details>
 
@@ -69,18 +69,21 @@ Profissional de **Inteligência de Mercado e Análise de Dados** com sólida tra
 
 <hr />
 
-### 🏙️ Atividade em Relevo 3D
-*Renderizado automaticamente todos os dias.*
+### 🏙️ Atividade em Relevo 3D (Dark Theme)
+*Renderizado automaticamente todos os dias no tema escuro.*
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/profile-green-animate.svg" alt="Gráfico de Contribuições 3D" />
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/profile-night-view.svg" alt="Gráfico de Contribuições 3D Escuro" />
 </div>
 
 <hr />
 
-### 📊 Estatísticas em Tempo Real
-*Salvo localmente para evitar instabilidades de APIs de terceiros.*
+### 📊 Estatísticas em Tempo Real (Tema Escuro)
+*Cards gerados localmente via GitHub Actions (livre de instabilidades externas).*
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats.svg" alt="Estatísticas do GitHub" />
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/0-profile-details.svg" alt="Resumo de Atividades do GitHub" />
+  <br />
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/1-repos-per-language.svg" alt="Repositórios por Linguagem" />
+  <img src="https://raw.githubusercontent.com/PabliitoxD/PabliitoxD/output/github-stats/2-most-commit-language.svg" alt="Linguagens Mais Modificadas" />
 </div>
